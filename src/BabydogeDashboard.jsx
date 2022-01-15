@@ -6,6 +6,9 @@ function BabydogeDashboard() {
   const [coinCount, setCoinCount] = useState(400000000000);
   const [coinValue, setCoinValue] = useState(0.000002);
 
+  let ADRESS = "0x9c41f4215152d3c431f29c228afb0cf4b5a1a2d8";
+  let CONTRACT_ADRESS = "0xc748673057861a797275CD8A068AbB95A902e8de";
+
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -13,8 +16,7 @@ function BabydogeDashboard() {
   useEffect(() => {
     async function fetchCoinCount() {
       try {
-        let url =
-          "https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0xc748673057861a797275CD8A068AbB95A902e8de&address=0x9c41f4215152d3c431f29c228afb0cf4b5a1a2d8&tag=latest&apikey=";
+        let url = `https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=${CONTRACT_ADRESS}&address=${ADRESS}&tag=latest&apikey=`;
         url += process.env.REACT_APP_BSCSCAN_API_KEY;
         const response = await fetch(url);
         console.log("Fetching API succeded");
