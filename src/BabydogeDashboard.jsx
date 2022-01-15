@@ -3,17 +3,18 @@ import logo from "./images/babydogecoin.png";
 import doge from "./images/babydoge.png";
 
 function BabydogeDashboard() {
-  const [coinCount, setCoinCount] = useState(400000000000);
-  const [coinValue, setCoinValue] = useState(0.000002);
-
-  let ADRESS = "0x9c41f4215152d3c431f29c228afb0cf4b5a1a2d8";
-  let CONTRACT_ADRESS = "0xc748673057861a797275CD8A068AbB95A902e8de";
+  const [coinCount, setCoinCount] = useState(99999999999999);
+  const [coinValue, setCoinValue] = useState(0.000000002);
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   useEffect(() => {
+    let ADRESS = "0x9c41f4215152d3c431f29c228afb0cf4b5a1a2d8";
+    let CONTRACT_ADRESS = "0xc748673057861a797275CD8A068AbB95A902e8de";
+    let MINUTE_INTERVAL = 8;
+
     async function fetchCoinCount() {
       try {
         let url = `https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=${CONTRACT_ADRESS}&address=${ADRESS}&tag=latest&apikey=`;
@@ -46,29 +47,29 @@ function BabydogeDashboard() {
       }
     }
 
-    fetchCoinCount();
-    fetchCoinValue();
+    setInterval(fetchCoinCount(), MINUTE_INTERVAL * 60000);
+    setInterval(fetchCoinValue(), MINUTE_INTERVAL * 60000);
   }, []);
 
   return (
     <div className="content">
       <nav className="nav">
-        <img className="nav-logo" src={logo} />
+        <img className="nav-logo" alt="" src={logo} />
         <h1 className="nav-title">Babydogecoin</h1>
       </nav>
       <div className="top-section">
         <h1 className="count-display">
           {numberWithCommas(Math.floor(coinCount))}
-          <img className="count-coin" src={logo} />
+          <img className="count-coin" alt="" src={logo} />
         </h1>
       </div>
       <div className="value-container">
         <h3 className="value-display">
-          {numberWithCommas(Math.floor(coinCount * coinValue))} $
+          $ {numberWithCommas(Math.floor(coinCount * coinValue))}
         </h3>
       </div>
       <div className="babydoge-container">
-        <img className="babydoge" src={doge} />
+        <img className="babydoge" alt="" src={doge} />
       </div>
     </div>
   );

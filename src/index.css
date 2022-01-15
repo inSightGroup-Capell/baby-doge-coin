@@ -55,13 +55,13 @@ code {
   padding: clamp(10px, 4%, 25px);
   background-color: #8aa4bb;
   border-radius: 15px;
-  font-size: 8vw;
+  font-size: 7vw;
   margin: 0 6%;
 }
 
 .count-coin {
   width: 0.8em;
-  margin: 0 0.5em;
+  margin-left: 0.5em;
 }
 
 .value-container {
