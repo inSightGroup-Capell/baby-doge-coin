@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/baby-doge-coin/static/css/main.7b87f6fa.css",
-    "main.js": "/baby-doge-coin/static/js/main.5e53b1b2.js",
+    "main.js": "/baby-doge-coin/static/js/main.178214d8.js",
     "static/media/babydoge.png": "/baby-doge-coin/static/media/babydoge.ce53be8bb8dff5446118.png",
     "static/media/babydogecoin.png": "/baby-doge-coin/static/media/babydogecoin.03d2a4a3133d03abedfb.png",
     "index.html": "/baby-doge-coin/index.html",
     "main.7b87f6fa.css.map": "/baby-doge-coin/static/css/main.7b87f6fa.css.map",
-    "main.5e53b1b2.js.map": "/baby-doge-coin/static/js/main.5e53b1b2.js.map"
+    "main.178214d8.js.map": "/baby-doge-coin/static/js/main.178214d8.js.map"
   },
   "entrypoints": [
     "static/css/main.7b87f6fa.css",
-    "static/js/main.5e53b1b2.js"
+    "static/js/main.178214d8.js"
   ]
 }
