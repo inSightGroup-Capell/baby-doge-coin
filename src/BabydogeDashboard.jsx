@@ -6,7 +6,7 @@ function BabydogeDashboard() {
   const [coinCount, setCoinCount] = useState(0);
   const [coinValue, setCoinValue] = useState(2);
 
-  let ADRESS = "0x9c41f4215152d3c431f29c228afb0cf4b5a1a2d8";
+  let ADRESS = "0x8afdd00f06714ddc8b197299d5321b3e82baf0e7";
   let CONTRACT_ADRESS = "0xc748673057861a797275CD8A068AbB95A902e8de";
   let MINUTE_INTERVAL = 8;
 
