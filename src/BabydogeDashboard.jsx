@@ -17,7 +17,7 @@ function BabydogeDashboard() {
   async function fetchCoinCount() {
     try {
       let url = `https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=${CONTRACT_ADRESS}&address=${ADRESS}&tag=latest&apikey=`;
-      url += process.env.REACT_APP_BSCSCAN_API_KEY;
+      url += process.env.REACT_APP_API_TOKEN;
       const response = await fetch(url);
       console.log("Fetching API succeded");
       const data = await response.json();
